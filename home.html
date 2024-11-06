@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Bulb Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            display: none; /* Hide images by default */
+            width: 100px; /* Set a fixed width for the images */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Color</h1>
+    <button style="background-color: green; color: white;" onclick="showBulb('green')">Green</button>
+    <button style="background-color: blue; color: white;" onclick="showBulb('blue')">Blue</button>
+    <button style="background-color: pink; color: black;" onclick="showBulb('pink')">Pink</button>
+    <button style="background-color: yellow; color: black;" onclick="showBulb('yellow')">Yellow</button>
+    <button style="background-color: tomato; color: white;" onclick="showBulb('tomato')">Tomato</button>
+
+    <img id="colorBulb" src="" alt="Color Bulb">
+
+    <script>
+        function showBulb(color) {
+            const img = document.getElementById('colorBulb');
+            if (color === 'green') {
+                img.src = 'https://example.com/green-bulb.png'; // Replace with your green bulb image URL
+                img.alt = 'Green Bulb';
+            } else if (color === 'blue') {
+                img.src = 'https://example.com/blue-bulb.png'; // Replace with your blue bulb image URL
+                img.alt = 'Blue Bulb';
+            } else if (color === 'pink') {
+                img.src = 'https://example.com/pink-bulb.png'; // Replace with your pink bulb image URL
+                img.alt = 'Pink Bulb';
+            } else if (color === 'yellow') {
+                img.src = 'https://example.com/yellow-bulb.png'; // Replace with your yellow bulb image URL
+                img.alt = 'Yellow Bulb';
+            } else if (color === 'tomato') {
+                img.src = 'https://example.com/tomato-bulb.png'; // Replace with your tomato bulb image URL
+                img.alt = 'Tomato Bulb';
+            }
+            img.style.display = 'block'; // Show the image
+        }
+    </script>
+
+</body>
+</html>
