@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        img {
+            display: none; /* Hide images by default */
+            width: 300px; /* Set a fixed width for the images */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Season</h1>
+    <button onclick="showImage('summer')">Summer</button>
+    <button onclick="showImage('winter')">Winter</button>
+    <button onclick="showImage('monsoon')">Monsoon</button>
+
+    <img id="seasonImage" src="" alt="Seasonal Image">
+
+    <script>
+        function showImage(season) {
+            const img = document.getElementById('seasonImage');
+            if (season === 'summer') {
+                img.src = 'img/sun.jfif'; // Replace with your sun image URL
+                img.alt = 'Summer - Sun';
+            } else if (season === 'winter') {
+                img.src = 'img/jacket.jfif'; // Replace with your jacket image URL
+                img.alt = 'Winter - Jacket';
+            } else if (season === 'monsoon') {
+                img.src = 'img/umbrella.jfif'; // Replace with your umbrella image URL
+                img.alt = 'Monsoon - Umbrella';
+            }
+            img.style.display = 'block'; // Show the image
+        }
+    </script>
+
+</body>
+</html>
