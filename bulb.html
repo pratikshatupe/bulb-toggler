@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Actors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        img {
+            display: none; /* Hide images by default */
+            width: 300px; /* Set a fixed width for the images */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Your Favorite Actor</h1>
+    <button onclick="showActor('actor1')">tammana bhatiya</button>
+    <button onclick="showActor('actor2')">saharukh khan</button>
+    <button onclick="showActor('actor3')">karina kapoor</button>
+    <button onclick="showActor('actor4')">salman khan</button>
+    <button onclick="showActor('actor5')">madhuri dikshit</button>
+
+    <img id="actorImage" src="" alt="Actor Image">
+
+    <script>
+        function showActor(actor) {
+            const img = document.getElementById('actorImage');
+            if (actor === 'actor1') {
+                img.src = 'img/tammu.jfif'; // Replace with your actor 1 image URL
+                img.alt = 'Actor 1';
+            } else if (actor === 'actor2') {
+                img.src = 'img/srk.jfif'; // Replace with your actor 2 image URL
+                img.alt = 'Actor 2';
+            } else if (actor === 'actor3') {
+                img.src = 'img/karina kapoor.jfif'; // Replace with your actor 3 image URL
+                img.alt = 'Actor 3';
+            } else if (actor === 'actor4') {
+                img.src = 'img/salman.jfif'; // Replace with your actor 4 image URL
+                img.alt = 'Actor 4';
+            } else if (actor === 'actor5') {
+                img.src = 'img/madhuri.jfif'; // Replace with your actor 5 image URL
+                img.alt = 'Actor 5';
+            }
+            img.style.display = 'block'; // Show the image
+        }
+    </script>
+
+</body>
+</html>
